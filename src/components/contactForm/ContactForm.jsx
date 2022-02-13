@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 import { FormTable, AddButton, Wrapper } from "./ContactForm.styled.jsx";
 
 const Form = ({ onSubmit }) => {
@@ -65,4 +66,7 @@ const Form = ({ onSubmit }) => {
   );
 };
 
+Form.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
 export default Form;
